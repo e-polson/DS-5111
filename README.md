@@ -2,15 +2,11 @@
 
 This repository contains the automation scripts, configuration files, and package requirements necessary to bootstrap a clean, reproducible data science development environment.
 
----
-
 ## Prerequisites
 
 Before beginning, ensure you have the following starting point configured:
 * An active Ubuntu Server 26.04 VM
 * GitHub SSH keys configured on the VM
-
----
 
 ## Repository Structure
 
