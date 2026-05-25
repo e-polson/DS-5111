@@ -57,3 +57,19 @@ pip list
 ```
 
 You have now set up the virtual environment for DS 5111.
+
+## Further updates
+
+To make updates and push them to Github use the following code:
+
+```bash
+git add <name of file or files>
+git commit -m "<insert your update message."
+git push
+```
+
+For updates that are made in Github, navigate to the root repo folder and run the following command to update your VM:
+
+```bash
+git pull
+```
