@@ -29,9 +29,11 @@ Before beginning, ensure you have the following starting point configured:
 When your VM is set up, clone the repository and navigate into the root directory:
 
 ```bash
-git clone git@github.com:/e-polson/DS-5111.git
+git clone git@github.com:/<user name>/DS-5111.git
 cd DS-5111
 ```
+
+Please note, I am assuming your repo will be named the same as mine. Once it has been cloned, use nano to open init_git_creds.sh and edit the username and user email to be the ones associated with your account.
 
 Next, intialize the scripts to prepare your virtual environment by executing these commands:
 
@@ -40,6 +42,10 @@ chmod +x scripts/init.sh scripts/init_git_creds.sh
 bash scripts/init.sh
 bash scripts/init_git_creds.sh
 ```
+
+To confirm the set up worked we need to run two quick tests:
+* Test for init.sh: Type `tree' in your terminal. If the script worked, it will output your directory structure instead of a "command not found" error.
+* Test for init_git_creds.sh: Review the terminal output after running the script. It should output your github email and username.
 
 Then, run the following command to automatically create your virtual environment and install the necessary dependencies:
 
