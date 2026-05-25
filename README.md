@@ -64,7 +64,7 @@ To make updates and push them to Github use the following code:
 
 ```bash
 git add <name of file or files>
-git commit -m "<insert your update message."
+git commit -m "<insert your update message>"
 git push
 ```
 
