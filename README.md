@@ -26,7 +26,7 @@ Before beginning, ensure you have the following starting point configured:
 
 ## Set Up Instructions
 
-When your VM is set up, clone the repository and navigate into the root directory:
+When your VM is set up, make a clone of my repository on Github. Then, clone your new repository and navigate into the root directory on the VM:
 
 ```bash
 git clone git@github.com:/<user name>/DS-5111.git
