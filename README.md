@@ -1,12 +1,20 @@
 # DS-5111 VM Setup Guide
+
 This repository contains the automation scripts, configuration files, and package requirements necessary to bootstrap a clean, reproducible data science development environment.
 
-## Prerequisites
-Here are the required steps needed to work with this repository:
-- Ubuntu Server 26.04 VM
-- GitHub SSH keys configured
+---
 
-## Repository structure
+## Prerequisites
+
+Before beginning, ensure you have the following starting point configured:
+* An active Ubuntu Server 26.04 VM
+* GitHub SSH keys configured on the VM
+
+---
+
+## Repository Structure
+
+```text
 .
 ├── README.md               # Project documentation and setup guide
 ├── makefile                # Automation tasks for Python environment management
@@ -14,9 +22,36 @@ Here are the required steps needed to work with this repository:
 └── scripts/
     ├── init.sh             # Base system package installer (make, tree, python venv)
     └── init_git_creds.sh   # Global Git identity configuration script
+```
 
-## Instructions
-Once you have cloned the repository to your server, you can run `make update' to automatically create the vertual enviornment and install the packages listed in "requirements.txt."
-To verify the set up works:
-  * type `. env/bin/activate' to activate the environment
-  * and `pip list' to confirm all packages are installed
+## Set Up Instructions
+
+When your VM is set up, clone the repository and navigate into the root directory:
+
+```bash
+git clone git@github.com:/e-polson/DS-5111.git
+cd DS-5111
+```
+
+Next, intialize the scripts to prepare your virtual environment by executing these commands:
+
+```bash
+chmod +x scripts/init.sh scripts/init_git_creds.sh
+bash scripts/init.sh
+bash scripts/init_git_creds.sh
+```
+
+Then, run the following command to automatically create your virtual environment and install the necessary dependencies:
+
+```bash
+make update
+```
+
+This triggers the creation of the environment and references requirements.txt to install pandas and numpy. We will then activate the environment and confirm that the required packages are installed by typing:
+
+```bash
+. env/bin/activate
+pip list
+```
+
+You have now set up the virtual environment for DS 5111.
